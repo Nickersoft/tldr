@@ -1,0 +1,6 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@imagePath : '/images';
+@fontPath  : '/fonts';

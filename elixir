@@ -1,0 +1,704 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Laravel Elixir - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="/build/assets/css/laravel-8c1b2819.css">
+	<link rel="apple-touch-icon" href="/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="/" class="brand">
+				<img src="/assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="http://laravel.com/docs/master/elixir">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="http://laravel.com/docs/5.1/elixir">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="http://laravel.com/docs/5.0/elixir">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="http://laravel.com/docs/4.2/elixir">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-lumen"><a href="http://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li class="divider"></li>
+		<li><a href="http://laravel.io">Laravel.io</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="/">
+			<img src="/assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="/">Home</a></li>
+		<li class="nav-docs"><a href="/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-lumen"><a href="http://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li class="divider"></li>
+		<li><a href="http://laravel.io">Laravel.io</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="/docs/master/releases">Release Notes</a></li>
+<li><a href="/docs/master/upgrade">Upgrade Guide</a></li>
+<li><a href="/docs/master/contributions">Contribution Guide</a></li>
+<li><a href="/api/master">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="/docs/master/installation">Installation</a></li>
+<li><a href="/docs/master/homestead">Homestead</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="/docs/master/quickstart">Beginner Task List</a></li>
+<li><a href="/docs/master/quickstart-intermediate">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="/docs/master/routing">Routing</a></li>
+<li><a href="/docs/master/middleware">Middleware</a></li>
+<li><a href="/docs/master/controllers">Controllers</a></li>
+<li><a href="/docs/master/requests">Requests</a></li>
+<li><a href="/docs/master/responses">Responses</a></li>
+<li><a href="/docs/master/views">Views</a></li>
+<li><a href="/docs/master/blade">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="/docs/master/lifecycle">Request Lifecycle</a></li>
+<li><a href="/docs/master/structure">Application Structure</a></li>
+<li><a href="/docs/master/providers">Service Providers</a></li>
+<li><a href="/docs/master/container">Service Container</a></li>
+<li><a href="/docs/master/contracts">Contracts</a></li>
+<li><a href="/docs/master/facades">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="/docs/master/authentication">Authentication</a></li>
+<li><a href="/docs/master/authorization">Authorization</a></li>
+<li><a href="/docs/master/artisan">Artisan Console</a></li>
+<li><a href="/docs/master/billing">Billing</a></li>
+<li><a href="/docs/master/cache">Cache</a></li>
+<li><a href="/docs/master/collections">Collections</a></li>
+<li><a href="/docs/master/elixir">Elixir</a></li>
+<li><a href="/docs/master/encryption">Encryption</a></li>
+<li><a href="/docs/master/errors">Errors &amp; Logging</a></li>
+<li><a href="/docs/master/events">Events</a></li>
+<li><a href="/docs/master/filesystem">Filesystem / Cloud Storage</a></li>
+<li><a href="/docs/master/hashing">Hashing</a></li>
+<li><a href="/docs/master/helpers">Helpers</a></li>
+<li><a href="/docs/master/localization">Localization</a></li>
+<li><a href="/docs/master/mail">Mail</a></li>
+<li><a href="/docs/master/packages">Package Development</a></li>
+<li><a href="/docs/master/pagination">Pagination</a></li>
+<li><a href="/docs/master/queues">Queues</a></li>
+<li><a href="/docs/master/redis">Redis</a></li>
+<li><a href="/docs/master/session">Session</a></li>
+<li><a href="/docs/master/envoy">SSH Tasks</a></li>
+<li><a href="/docs/master/scheduling">Task Scheduling</a></li>
+<li><a href="/docs/master/testing">Testing</a></li>
+<li><a href="/docs/master/validation">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="/docs/master/database">Getting Started</a></li>
+<li><a href="/docs/master/queries">Query Builder</a></li>
+<li><a href="/docs/master/migrations">Migrations</a></li>
+<li><a href="/docs/master/seeding">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="/docs/master/eloquent">Getting Started</a></li>
+<li><a href="/docs/master/eloquent-relationships">Relationships</a></li>
+<li><a href="/docs/master/eloquent-collections">Collections</a></li>
+<li><a href="/docs/master/eloquent-mutators">Mutators</a></li>
+<li><a href="/docs/master/eloquent-serialization">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="/docs/master/releases">Release Notes</a></li>
+<li><a href="/docs/master/upgrade">Upgrade Guide</a></li>
+<li><a href="/docs/master/contributions">Contribution Guide</a></li>
+<li><a href="/api/master">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="/docs/master/installation">Installation</a></li>
+<li><a href="/docs/master/homestead">Homestead</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="/docs/master/quickstart">Beginner Task List</a></li>
+<li><a href="/docs/master/quickstart-intermediate">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="/docs/master/routing">Routing</a></li>
+<li><a href="/docs/master/middleware">Middleware</a></li>
+<li><a href="/docs/master/controllers">Controllers</a></li>
+<li><a href="/docs/master/requests">Requests</a></li>
+<li><a href="/docs/master/responses">Responses</a></li>
+<li><a href="/docs/master/views">Views</a></li>
+<li><a href="/docs/master/blade">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="/docs/master/lifecycle">Request Lifecycle</a></li>
+<li><a href="/docs/master/structure">Application Structure</a></li>
+<li><a href="/docs/master/providers">Service Providers</a></li>
+<li><a href="/docs/master/container">Service Container</a></li>
+<li><a href="/docs/master/contracts">Contracts</a></li>
+<li><a href="/docs/master/facades">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="/docs/master/authentication">Authentication</a></li>
+<li><a href="/docs/master/authorization">Authorization</a></li>
+<li><a href="/docs/master/artisan">Artisan Console</a></li>
+<li><a href="/docs/master/billing">Billing</a></li>
+<li><a href="/docs/master/cache">Cache</a></li>
+<li><a href="/docs/master/collections">Collections</a></li>
+<li><a href="/docs/master/elixir">Elixir</a></li>
+<li><a href="/docs/master/encryption">Encryption</a></li>
+<li><a href="/docs/master/errors">Errors &amp; Logging</a></li>
+<li><a href="/docs/master/events">Events</a></li>
+<li><a href="/docs/master/filesystem">Filesystem / Cloud Storage</a></li>
+<li><a href="/docs/master/hashing">Hashing</a></li>
+<li><a href="/docs/master/helpers">Helpers</a></li>
+<li><a href="/docs/master/localization">Localization</a></li>
+<li><a href="/docs/master/mail">Mail</a></li>
+<li><a href="/docs/master/packages">Package Development</a></li>
+<li><a href="/docs/master/pagination">Pagination</a></li>
+<li><a href="/docs/master/queues">Queues</a></li>
+<li><a href="/docs/master/redis">Redis</a></li>
+<li><a href="/docs/master/session">Session</a></li>
+<li><a href="/docs/master/envoy">SSH Tasks</a></li>
+<li><a href="/docs/master/scheduling">Task Scheduling</a></li>
+<li><a href="/docs/master/testing">Testing</a></li>
+<li><a href="/docs/master/validation">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="/docs/master/database">Getting Started</a></li>
+<li><a href="/docs/master/queries">Query Builder</a></li>
+<li><a href="/docs/master/migrations">Migrations</a></li>
+<li><a href="/docs/master/seeding">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="/docs/master/eloquent">Getting Started</a></li>
+<li><a href="/docs/master/eloquent-relationships">Relationships</a></li>
+<li><a href="/docs/master/eloquent-collections">Collections</a></li>
+<li><a href="/docs/master/eloquent-mutators">Mutators</a></li>
+<li><a href="/docs/master/eloquent-serialization">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Laravel Elixir</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#installation">Installation &amp; Setup</a></li>
+<li><a href="#running-elixir">Running Elixir</a></li>
+<li><a href="#working-with-stylesheets">Working With Stylesheets</a>
+<ul>
+<li><a href="#less">Less</a></li>
+<li><a href="#sass">Sass</a></li>
+<li><a href="#plain-css">Plain CSS</a></li>
+<li><a href="#css-source-maps">Source Maps</a></li>
+</ul></li>
+<li><a href="#working-with-scripts">Working With Scripts</a>
+<ul>
+<li><a href="#coffeescript">CoffeeScript</a></li>
+<li><a href="#browserify">Browserify</a></li>
+<li><a href="#babel">Babel</a></li>
+<li><a href="#javascript">Scripts</a></li>
+</ul></li>
+<li><a href="#copying-files-and-directories">Copying Files &amp; Directories</a></li>
+<li><a href="#versioning-and-cache-busting">Versioning / Cache Busting</a></li>
+<li><a href="#browser-sync">BrowserSync</a></li>
+<li><a href="#calling-existing-gulp-tasks">Calling Existing Gulp Tasks</a></li>
+<li><a href="#writing-elixir-extensions">Writing Elixir Extensions</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel Elixir provides a clean, fluent API for defining basic <a href="http://gulpjs.com">Gulp</a> tasks for your Laravel application. Elixir supports several common CSS and JavaScript pre-processors, and even testing tools. Using method chaining, Elixir allows you to fluently define your asset pipeline. For example:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.sass('app.scss')
+       .coffee('app.coffee');
+});</code></pre>
+<p>If you've ever been confused about how to get started with Gulp and asset compilation, you will love Laravel Elixir. However, you are not required to use it while developing your application. You are free to use any asset pipeline tool you wish, or even none at all.</p>
+<p><a name="installation"></a></p>
+<h2>Installation &amp; Setup</h2>
+<h3>Installing Node</h3>
+<p>Before triggering Elixir, you must first ensure that Node.js is installed on your machine.</p>
+<pre><code>node -v</code></pre>
+<p>By default, Laravel Homestead includes everything you need; however, if you aren't using Vagrant, then you can easily install Node by visiting <a href="http://nodejs.org/download/">their download page</a>.</p>
+<h3>Gulp</h3>
+<p>Next, you'll want to pull in <a href="http://gulpjs.com">Gulp</a> as a global NPM package:</p>
+<pre><code>npm install --global gulp</code></pre>
+<h3>Laravel Elixir</h3>
+<p>The only remaining step is to install Elixir! Within a fresh installation of Laravel, you'll find a <code>package.json</code> file in the root. Think of this like your <code>composer.json</code> file, except it defines Node dependencies instead of PHP. You may install the dependencies it references by running:</p>
+<pre><code>npm install</code></pre>
+<p>If you are developing on a Windows system or you are running your VM on a Windows host system, you may need to run the <code>npm install</code> command with the <code>--no-bin-links</code> switch enabled:</p>
+<pre><code>npm install --no-bin-links</code></pre>
+<p><a name="running-elixir"></a></p>
+<h2>Running Elixir</h2>
+<p>Elixir is built on top of <a href="http://gulpjs.com">Gulp</a>, so to run your Elixir tasks you only need to run the <code>gulp</code> command in your terminal. Adding the <code>--production</code> flag to the command will instruct Elixir to minify your CSS and JavaScript files:</p>
+<pre><code>// Run all tasks...
+gulp
+
+// Run all tasks and minify all CSS and JavaScript...
+gulp --production</code></pre>
+<h4>Watching Assets For Changes</h4>
+<p>Since it is inconvenient to run the <code>gulp</code> command on your terminal after every change to your assets, you may use the <code>gulp watch</code> command. This command will continue running in your terminal and watch your assets for any changes. When changes occur, new files will automatically be compiled:</p>
+<pre><code>gulp watch</code></pre>
+<p><a name="working-with-stylesheets"></a></p>
+<h2>Working With Stylesheets</h2>
+<p>The <code>gulpfile.js</code> file in your project's root directory contains all of your Elixir tasks. Elixir tasks can be chained together to define exactly how your assets should be compiled.</p>
+<p><a name="less"></a></p>
+<h3>Less</h3>
+<p>To compile <a href="http://lesscss.org/">Less</a> into CSS, you may use the <code>less</code> method. The <code>less</code> method assumes that your Less files are stored in <code>resources/assets/less</code>. By default, the task will place the compiled CSS for this example in <code>public/css/app.css</code>:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.less('app.less');
+});</code></pre>
+<p>You may also combine multiple Less files into a single CSS file. Again, the resulting CSS will be placed in <code>public/css/app.css</code>:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.less([
+        'app.less',
+        'controllers.less'
+    ]);
+});</code></pre>
+<p>If you wish to customize the output location of the compiled CSS, you may pass a second argument to the <code>less</code> method:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.less('app.less', 'public/stylesheets');
+});
+
+// Specifying a specific output filename...
+elixir(function(mix) {
+    mix.less('app.less', 'public/stylesheets/style.css');
+});</code></pre>
+<p><a name="sass"></a></p>
+<h3>Sass</h3>
+<p>The <code>sass</code> method allows you to compile <a href="http://sass-lang.com/">Sass</a> into CSS. Assuming your Sass files are stored at <code>resources/assets/sass</code>, you may use the method like so:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.sass('app.scss');
+});</code></pre>
+<p>Again, like the <code>less</code> method, you may compile multiple Sass files into a single CSS file, and even customize the output directory of the resulting CSS:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.sass([
+        'app.scss',
+        'controllers.scss'
+    ], 'public/assets/css');
+});</code></pre>
+<p><a name="plain-css"></a></p>
+<h3>Plain CSS</h3>
+<p>If you would just like to combine some plain CSS stylesheets into a single file, you may use the <code>styles</code> method. Paths passed to this method are relative to the <code>resources/assets/css</code> directory and the resulting CSS will be placed in <code>public/css/all.css</code>:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.styles([
+        'normalize.css',
+        'main.css'
+    ]);
+});</code></pre>
+<p>Of course, you may also output the resulting file to a custom location by passing a second argument to the <code>styles</code> method:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.styles([
+        'normalize.css',
+        'main.css'
+    ], 'public/assets/css');
+});</code></pre>
+<p><a name="css-source-maps"></a></p>
+<h3>Source Maps</h3>
+<p>Source maps are enabled out of the box. So, for each file that is compiled you will find a companion <code>*.css.map</code> file in the same directory. This mapping allows you to trace your compiled stylesheet selectors back to your original Sass or Less while debugging in your browser.</p>
+<p>If you do not want source maps generated for your CSS, you may disable them using a simple configuration option:</p>
+<pre><code class="language-javascript">elixir.config.sourcemaps = false;
+
+elixir(function(mix) {
+    mix.sass('app.scss');
+});</code></pre>
+<p><a name="working-with-scripts"></a></p>
+<h2>Working With Scripts</h2>
+<p>Elixir also provides several functions to help you work with your JavaScript files, such as compiling ECMAScript 6, compiling CoffeeScript, Browserify, minification, and simply concatenating plain JavaScript files.</p>
+<p><a name="coffeescript"></a></p>
+<h3>CoffeeScript</h3>
+<p>The <code>coffee</code> method may be used to compile <a href="http://coffeescript.org/">CoffeeScript</a> into plain JavaScript. The <code>coffee</code> function accepts a string or array of CoffeeScript files relative to the <code>resources/assets/coffee</code> directory and generates a single <code>app.js</code> file in the <code>public/js</code> directory:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.coffee(['app.coffee', 'controllers.coffee']);
+});</code></pre>
+<p><a name="browserify"></a></p>
+<h3>Browserify</h3>
+<p>Elixir also ships with a <code>browserify</code> method, which gives you all the benefits of requiring modules in the browser and using ECMAScript 6.</p>
+<p>This task assumes that your scripts are stored in <code>resources/assets/js</code> and will place the resulting file in <code>public/js/main.js</code>:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.browserify('main.js');
+});</code></pre>
+<p>While Browserify ships with the Partialify and Babelify transformers, you're free to install and add more if you wish:</p>
+<pre><code>npm install aliasify --save-dev</code></pre>
+<pre><code class="language-javascript">elixir.config.js.browserify.transformers.push({
+    name: 'aliasify',
+    options: {}
+});
+
+elixir(function(mix) {
+    mix.browserify('main.js');
+});</code></pre>
+<p><a name="babel"></a></p>
+<h3>Babel</h3>
+<p>The <code>babel</code> method may be used to compile <a href="https://babeljs.io/docs/learn-es2015/">ECMAScript 6 and 7</a> into plain JavaScript. This function accepts an array of files relative to the <code>resources/assets/js</code> directory, and generates a single <code>all.js</code> file in the <code>public/js</code> directory:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.babel([
+        'order.js',
+        'product.js'
+    ]);
+});</code></pre>
+<p>To choose a different output location, simply specify your desired path as the second argument. The signature and functionality of this method are identical to <code>mix.scripts()</code>, excluding the Babel compilation.</p>
+<p><a name="javascript"></a></p>
+<h3>Scripts</h3>
+<p>If you have multiple JavaScript files that you would like to combine into a single file, you may use the <code>scripts</code> method.</p>
+<p>The <code>scripts</code> method assumes all paths are relative to the <code>resources/assets/js</code> directory, and will place the resulting JavaScript in <code>public/js/all.js</code> by default:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.scripts([
+        'jquery.js',
+        'app.js'
+    ]);
+});</code></pre>
+<p>If you need to combine multiple sets of scripts into different files, you may make multiple calls to the <code>scripts</code> method. The second argument given to the method determines the resulting file name for each concatenation:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.scripts(['app.js', 'controllers.js'], 'public/js/app.js')
+       .scripts(['forum.js', 'threads.js'], 'public/js/forum.js');
+});</code></pre>
+<p>If you need to combine all of the scripts in a given directory, you may use the <code>scriptsIn</code> method. The resulting JavaScript will be placed in <code>public/js/all.js</code>:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.scriptsIn('public/js/some/directory');
+});</code></pre>
+<p><a name="copying-files-and-directories"></a></p>
+<h2>Copying Files &amp; Directories</h2>
+<p>The <code>copy</code> method may be used to copy files and directories to new locations. All operations are relative to the project's root directory:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.copy('vendor/foo/bar.css', 'public/css/bar.css');
+});
+
+elixir(function(mix) {
+    mix.copy('vendor/package/views', 'resources/views');
+});</code></pre>
+<p><a name="versioning-and-cache-busting"></a></p>
+<h2>Versioning / Cache Busting</h2>
+<p>Many developers suffix their compiled assets with a timestamp or unique token to force browsers to load the fresh assets instead of serving stale copies of the code. Elixir can handle this for you using the <code>version</code> method.</p>
+<p>The <code>version</code> method accepts a file name relative to the <code>public</code> directory, and will append a unique hash to the filename, allowing for cache-busting. For example, the generated file name will look something like: <code>all-16d570a7.css</code>:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.version('css/all.css');
+});</code></pre>
+<p>After generating the versioned file, you may use Laravel's global <code>elixir</code> PHP helper function within your <a href="/docs/master/views">views</a> to load the appropriately hashed asset. The <code>elixir</code> function will automatically determine the name of the hashed file:</p>
+<pre><code>&lt;link rel="stylesheet" href="{{ elixir('css/all.css') }}"&gt;</code></pre>
+<h4>Versioning Multiple Files</h4>
+<p>You may pass an array to the <code>version</code> method to version multiple files:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.version(['css/all.css', 'js/app.js']);
+});</code></pre>
+<p>Once the files have been versioned, you may use the <code>elixir</code> helper function to generate links to the proper hashed files. Remember, you only need to pass the name of the un-hashed file to the <code>elixir</code> helper function. The helper will use the un-hashed name to determine the current hashed version of the file:</p>
+<pre><code>&lt;link rel="stylesheet" href="{{ elixir('css/all.css') }}"&gt;
+
+&lt;script src="{{ elixir('js/app.js') }}"&gt;&lt;/script&gt;</code></pre>
+<p><a name="browser-sync"></a></p>
+<h2>BrowserSync</h2>
+<p>BrowserSync automatically refreshes your web browser after you make changes to your front-end resources. You can use the <code>browserSync</code> method to instruct Elixir to start a BrowserSync server when you run the <code>gulp watch</code> command:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.browserSync();
+});</code></pre>
+<p>Once you run <code>gulp watch</code>, access your web application using port 3000 to enable browser syncing: <code>http://homestead.app:3000</code>. If you're using a domain other than <code>homestead.app</code> for local development, you may pass an array of <a href="http://www.browsersync.io/docs/options/">options</a> as the first argument to the <code>browserSync</code> method:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.browserSync({
+        proxy: 'project.app'
+    });
+});</code></pre>
+<p><a name="calling-existing-gulp-tasks"></a></p>
+<h2>Calling Existing Gulp Tasks</h2>
+<p>If you need to call an existing Gulp task from Elixir, you may use the <code>task</code> method. As an example, imagine that you have a Gulp task that simply speaks a bit of text when called:</p>
+<pre><code class="language-javascript">gulp.task('speak', function() {
+    var message = 'Tea...Earl Grey...Hot';
+
+    gulp.src('').pipe(shell('say ' + message));
+});</code></pre>
+<p>If you wish to call this task from Elixir, use the <code>mix.task</code> method and pass the name of the task as the only argument to the method:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.task('speak');
+});</code></pre>
+<h4>Custom Watchers</h4>
+<p>If you need to register a watcher to run your custom task each time some files are modified, pass a regular expression as the second argument to the <code>task</code> method:</p>
+<pre><code class="language-javascript">elixir(function(mix) {
+    mix.task('speak', 'app/**/*.php');
+});</code></pre>
+<p><a name="writing-elixir-extensions"></a></p>
+<h2>Writing Elixir Extensions</h2>
+<p>If you need more flexibility than Elixir's <code>task</code> method can provide, you may create custom Elixir extensions. Elixir extensions allow you to pass arguments to your custom tasks. For example, you could write an extension like so:</p>
+<pre><code class="language-javascript">// File: elixir-extensions.js
+
+var gulp = require('gulp');
+var shell = require('gulp-shell');
+var Elixir = require('laravel-elixir');
+
+var Task = Elixir.Task;
+
+Elixir.extend('speak', function(message) {
+
+    new Task('speak', function() {
+        return gulp.src('').pipe(shell('say ' + message));
+    });
+
+});
+
+// mix.speak('Hello World');</code></pre>
+<p>That's it! Notice that your Gulp-specific logic should be placed within the function passed as the second argument to the <code>Task</code> constructor. You may either place this at the top of your Gulpfile, or instead extract it to a custom tasks file. For example, if you place your extensions in <code>elixir-extensions.js</code>, you may require the file from your main <code>Gulpfile</code> like so:</p>
+<pre><code class="language-javascript">// File: Gulpfile.js
+
+var elixir = require('laravel-elixir');
+
+require('./elixir-extensions')
+
+elixir(function(mix) {
+    mix.speak('Tea, Earl Grey, Hot');
+});</code></pre>
+<h4>Custom Watchers</h4>
+<p>If you would like your custom task to be re-triggered while running <code>gulp watch</code>, you may register a watcher:</p>
+<pre><code class="language-javascript">new Task('speak', function() {
+    return gulp.src('').pipe(shell('say ' + message));
+})
+.watch('./app/**');</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-lumen"><a href="http://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li class="divider"></li>
+		<li><a href="http://laravel.io">Laravel.io</a></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = 'master';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="/assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="/build/assets/js/laravel-17d3476a.js"></script>
+	<script src="/assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>
