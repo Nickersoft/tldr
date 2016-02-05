@@ -1,4 +1,4 @@
-<center><img src="resources/assets/images/logo.png" width="250"/></center>
+<img src="resources/assets/images/logo.png" width="250"/>
 
 A Search Engine For Students
 ----------------------------
