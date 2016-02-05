@@ -49,6 +49,7 @@ css:
 	gulp --production
 
 clean:
+	rm -rf storage/database.sqlite
 	rm -rf public/images
 	rm -rf public/css
 	rm -rf public/js

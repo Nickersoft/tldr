@@ -20,7 +20,6 @@ class CreateDocumentsTable extends Migration
             $table->string('professor');
             $table->boolean('approved');
             $table->timestamps();
-
         });
     }
 
