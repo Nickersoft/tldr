@@ -1,27 +1,29 @@
-## Laravel PHP Framework
+<center><img src="resources/assets/images/logo.png" width="250"/></center>
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+A Search Engine For Students
+----------------------------
+TLDR is an Internet acronym for "too long, didn't read". It is this acronym that powers the TLDR (stylized tl;dr) search engine, which allows students to upload and search an endless stream of course notes, reading notes, practice exams, and more for no charge. Think of it as an entire world of summarized information. Sound cool? Keep reading, my friend.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Running TLDR
+Getting up and running with TLDR is ridiculously simple. Just `cd` into the source directory and run:
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+    make
 
-## Official Documentation
+One word. See? Simple. Of course, if you want to do a little more than just run everything at once, here's a nice table of what you can do with the `make` command:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+| Command             | Description                                               |
+|---------------------|-----------------------------------------------------------|
+| `make assets`       | Builds *all* CSS and JavaScript                           |
+| `make clean`        | Removes the database file, as well as all compiled JS/CSS |
+| `make css`          | Compiles (custom) SASS                                    |
+| `make dependencies` | Installs all Node and Laravel dependencies                |
+| `make js`           | Compiles Javascript using r.js                            |
+| `make serve`        | Runs the Laravel server at localhost:8000                 |
+| `make semantic`     | Rebuild Semantic UI                                       |
+| `make static`       | Builds (custom) CSS and JS                                |
 
-## Contributing
+And, of course, to visit TLDR just visit:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+    http://localhost:8000
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+in your browser.
