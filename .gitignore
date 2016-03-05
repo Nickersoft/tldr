@@ -115,3 +115,8 @@ node_modules
 
 # Temp directory
 .tmp
+
+# Basic stuff
+storage/database.sqlite
+storage/app/*
+storage/logs
