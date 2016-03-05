@@ -2,6 +2,7 @@
 
 all:
 	make setup
+	make assets
 	make migrate
 	make serve
 
@@ -36,7 +37,9 @@ semantic:
 serve:
 	php artisan serve
 
-setup: dependencies files semantic static
+setup: folders files dependencies
+
+assets: semantic static
 
 images:
 	cp -af resources/assets/images/. public/images/
@@ -49,9 +52,10 @@ css:
 	gulp --production
 
 clean:
+	rm -rf storage/logs
 	rm -rf storage/database.sqlite
 	rm -rf public/images
 	rm -rf public/css
 	rm -rf public/js
 
-static: clean folders permissions images css js
+static: permissions images css js
