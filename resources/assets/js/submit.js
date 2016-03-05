@@ -8,6 +8,10 @@ define([
     'semantic'
 ], function($, _, Backbone, coursesJSON, professorsJSON, UploadProgressTpl) {
 
+    function isInteger(x) {
+        return (typeof x === 'number') && (x % 1 === 0);
+    }
+
     var SubmitModel = Backbone.Model.extend({
 
         defaults: {
@@ -48,7 +52,7 @@ define([
             });
 
             this.listenTo(this.model, 'change', this.render);
-
+            this.listenTo(this.model, 'change:response', this.updateResponse);
         },
 
         populateDropdown: function(array, id, placeholder) {
@@ -70,6 +74,14 @@ define([
             this.$el.find('#' + id).prop('disabled', true).addClass('disabled').click(function() {});
         },
 
+        updateResponse: function() {
+            var response;
+
+            response = this.model.get('response');
+
+            if (!isInteger(response))
+                this.$el.find('input[name="filename"]').val(response);
+        },
 
         ajaxUpload: function() {
 
@@ -89,7 +101,7 @@ define([
             form_data.append('_token', token);
 
             $.ajax({
-                url: '/submit/upload/',
+                url: '/upload/',
                 dataType: 'text',
                 cache: false,
                 contentType: false,
@@ -162,7 +174,7 @@ define([
                 this.$el.find('#uploadProgress').progress({
                     percent: 0
                 });
-            } else if (response == 200) {
+            } else if (isNaN(response)) {
                 this.disableBtn('uploadBtn');
                 this.enableBtn('continueBtn');
             } else if (response > 0) {

@@ -14,10 +14,11 @@ class CreateDocumentsTable extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('title', 50);
             $table->string('description', 255);
             $table->string('course');
             $table->string('professor');
+            $table->string('filename');
             $table->boolean('approved');
             $table->timestamps();
         });

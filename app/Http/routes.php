@@ -26,5 +26,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // Submission routes
 Route::get('/submit', 'SubmitController@index');
-Route::post('/submit/save', 'SubmitController@save');
-Route::post('/submit/upload', 'SubmitController@upload');
+Route::post('/submit', 'SubmitController@save');
+Route::post('/upload', 'SubmitController@upload');
+
+// Submission routes
+Route::post('/search', 'SearchController@index');

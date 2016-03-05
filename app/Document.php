@@ -18,5 +18,5 @@ class Document extends Model
      *
      * @var array
      */
-     protected $fillable = ['name', 'description', 'course', 'professor', 'approved'];
+     protected $fillable = ['title', 'description', 'course', 'professor', 'filename', 'approved'];
 }

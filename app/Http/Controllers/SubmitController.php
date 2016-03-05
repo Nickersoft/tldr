@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Log;
 use Illuminate\Http\Request;
+use Storage;
 
 use App\Document;
 
@@ -36,19 +37,23 @@ class SubmitController extends Controller
     public function save(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:255',
+            'title' => 'required|max:255',
             'description' => 'required',
         ]);
 
-        $document = new Document;
+        if (Storage::move('.tmp/' . $request->filename, 'files/' . $request->filename)) {
+            $document = new Document;
 
-        $document->name = $request->name;
-        $document->description =$request->description;
-        $document->course = $request->course;
-        $document->professor = $request->professor;
+            $document->title = $request->title;
+            $document->description =$request->description;
+            $document->course = $request->course;
+            $document->professor = $request->professor;
+            $document->filename = $request->filename;
+            $document->approved = false;
 
-        $document->save();
-//view('pages.welcome', ['submitted' => true]);
+            $document->save();
+        }
+
         return 'fuck';
     }
 
@@ -62,13 +67,13 @@ class SubmitController extends Controller
     {
         $image = $request->file('pdf');
 
-        $destinationPath = '.tmp/';
+        $destinationPath =  storage_path('app/.tmp');
         $extension = $image->getClientOriginalExtension();
 
         if ($image->isValid() && $extension == 'pdf') {
             $filename = preg_replace('!\s+!', '_', pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME)) . '-' . time() . '.' . $extension;
             $request->file('pdf')->move($destinationPath, $filename);
-            return 200;
+            return $filename;
         } else {
             return 415;
         }

@@ -6,7 +6,7 @@
     <div class="column" style="max-width:450px;">
         <div id="submit">
             <div class="ui stacked segment">
-                <form role="form" method="POST" id="submitForm" action='/submit/save' class="ui large form" enctype="multipart/form-data">
+                <form role="form" method="POST" id="submitForm" action='/auth/login' class="ui large form" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                     <div class="field">
                         <div class="ui left icon input">

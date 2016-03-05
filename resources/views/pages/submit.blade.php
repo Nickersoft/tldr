@@ -13,7 +13,7 @@
                     @endif
                     <div class="sub header">Notes can be for readings or for lectures</div>
                 </h1>
-                <form role="form" method="POST" id="submitForm" action='/submit/save' class="ui form" enctype="multipart/form-data">
+                <form role="form" method="POST" id="submitForm" action='/submit' class="ui form" enctype="multipart/form-data">
                     <div class="field">
                         <input type="text" name="title" placeholder="Title">
                     </div>
@@ -31,6 +31,7 @@
                             </select>
                         </div>
                     </div>
+                    <input type="hidden" name="filename" value="" />
                     <div id="uploadArea" class="field">
                         <div id="uploadBtn" class="ui fluid button">Select File</div>
                         <input type="file" name="pdf" id="uploadInput" class="hidden" />
