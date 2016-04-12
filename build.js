@@ -3,7 +3,7 @@
     paths: {
         backbone: '../../../node_modules/backbone/backbone-min',
         jquery: '../../../node_modules/jquery/dist/jquery.min',
-        underscore: '../../../node_modules/backbone/node_modules/underscore/underscore-min',
+        underscore: '../../../node_modules/underscore/underscore-min',
         semantic: '../../../semantic/dist/semantic.min',
         text: '../../../node_modules/text/text',
         templates: '../../templates'
